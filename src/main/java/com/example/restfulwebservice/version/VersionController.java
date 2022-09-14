@@ -12,4 +12,9 @@ public class VersionController<Person> {
             return new PersonV1("Bob Charlie");
         }
 
+    @GetMapping("/v2/person")
+    public PersonV2 getVersion2(){
+        return new PersonV2(new Name("Bob", "Charlie"));
+    }
+
 }
